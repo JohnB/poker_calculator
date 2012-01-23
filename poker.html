@@ -28,14 +28,14 @@
       <input type="text" id="date_entry" value="-todays-date-here-" disabled="disabled""/>
       <p></p>
       <label for="buy_in_slider">Buy-in:</label>
-      <input type="range" name="buy_in_slider" id="slider-0" value="25" min="0" max="100"/>
+      <input type="range" name="buy_in_slider" id="buy_in_slider" value="25" min="0" max="100" />
 
       <p></p>
       <label for="players_slider">Players:</label>
-      <input type="range" name="players_slider" id="slider-0" value="7" min="4" max="10"/>
+      <input type="range" name="players_slider" id="players_slider" value="7" min="4" max="10" />
     </form>
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#player_page" data-role="button" data-icon"arrow-r" data-theme="b" >Next</a>
+      <a href="#player_page" data-role="button" data-icon"arrow-r" data-theme="b" id="save_setup_data">Next</a>
     </div>
   </div>
 </div>
@@ -46,7 +46,7 @@
   </div>
   <div data-role="content" data-theme="e">
     <h2>Players</h2>
-    <ul data-role="listview" data-inset="true">
+    <ul data-role="listview" data-inset="true" id="players_list">
       <li>
         <a href="#chip_value_page">
           <span style="width: 30%;">BobS</span>
@@ -90,10 +90,10 @@
     <h1>Poker Calculator</h1>
   </div>
   <div data-role="content" data-theme="e">
-    <label for="chip_count_input">Chips for -player-:</label>
+    <label for="chip_count_input"><span id='chips_for_player'></span></label>
     <input type="number" name="chip_count_input" id="chip_count" value="25.00"/>
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#player_page" data-role="button" data-theme="b" >Done</a>
+      <a href="#player_page" data-role="button" data-theme="b" id="save_player">Done</a>
     </div>
   </div>
 </div>

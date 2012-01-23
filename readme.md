@@ -1,9 +1,9 @@
 # Poker Calculator
 This may seem a bit silly for most poker players. For them, one simply adds up the value of the chips in
-front of them and that is their payout in the end. However, we play by special "TARP" rules that require
+front of them and that is their payout in the end. However, we play by special "[TARP](http://en.wikipedia.org/wiki/Troubled_Asset_Relief_Program)" rules that require
 a bit more work.
 
-# [TARP Poker](http://en.wikipedia.org/wiki/Troubled_Asset_Relief_Program)
+# TARP Poker
 The poker games are nothing special, but the buy-in and payout are a bit unusual since we're all "too big to fail".
 If anyone comes close to running out of chips, we give all the players a set of additional high-value chips.
 This allows the person who is losing to continue playing without increasing their buy-in.
