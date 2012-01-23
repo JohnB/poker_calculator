@@ -41,30 +41,8 @@
 </div>
 
 <div data-role="page" class="type-interior" id="player_page">
-  <div data-role="header" data-theme="e">
-    <h1>Poker Calculator</h1>
-  </div>
   <div data-role="content" data-theme="e">
-    <h2>Players</h2>
     <ul data-role="listview" data-inset="true" id="players_list">
-      <li>
-        <a href="#chip_value_page">
-          <span style="width: 30%;">BobS</span>
-          <span>$25.00</span>
-        </a>
-      </li>
-      <li>
-        <a href="#chip_value_page">
-          <span style="width: 30%;">BrianE</span>
-          <span>$25.00</span>
-        </a>
-      </li>
-      <li>
-        <a href="#chip_value_page">
-          <span style="width: 30%;">DavidR</span>
-          <span>$25.00</span>
-        </a>
-      </li>
     </ul>
     <span id='players_to_choose_from'>
       <span class="player">DavidR</span>
@@ -91,7 +69,7 @@
   </div>
   <div data-role="content" data-theme="e">
     <label for="chip_count_input"><span id='chips_for_player'></span></label>
-    <input type="number" name="chip_count_input" id="chip_count" value="25.00"/>
+    <input type="number" name="chip_count_input" id="chip_count" value=""/>
     <div data-role="controlgroup" data-type="horizontal">
       <a href="#player_page" data-role="button" data-theme="b" id="save_player">Done</a>
     </div>

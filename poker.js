@@ -17,6 +17,7 @@ var Poker = {
     var day = currentTime.getDate();
     var year = currentTime.getFullYear();
     Poker.current_date = '' + year + "/" + month + "/" + day;
+    $('#date_entry').val(Poker.current_date);
 
     // Attach save_setup_data to the #save_setup_data element
     $('#save_setup_data').click( function() {Poker.save_setup_data();});
@@ -44,15 +45,15 @@ var Poker = {
   select_player: function(element) {
     Poker.current_player = element.html();
     $('#chips_for_player').html('Chips for '+Poker.current_player);
-    $('#chip_count_input').val(Poker.players[Poker.current_player]);
+    $('#chip_count').val(Poker.players[Poker.current_player]);
     element.hide();
     // add to players list
-    var html = "<li id='+Poker.current_player+'>"+Poker.current_player+"</li>";
+    var html = "<li><a href='#chip_value_page' id='"+Poker.current_player+"'>"+Poker.current_player+"</li>";
     $('#players_list').append(html);
   },
 
   save_player: function() {
-    var chips = $('#chip_count_input').val();
+    var chips = $('#chip_count').val();
     var chip_value = parseFloat(chips);
     Poker.current_player[Poker.current_player] = chip_value;
     // update players list with $$$
