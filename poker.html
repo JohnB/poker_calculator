@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery Mobile Docs - Anatomy of a Page</title>
+  <title>Poker Calculator</title>
   <link rel="stylesheet" href="//code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css"/>
   <badlink rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
   <script src="//code.jquery.com/jquery-1.6.4.js"></script>
@@ -35,30 +35,26 @@
       <input type="range" name="players_slider" id="players_slider" value="7" min="4" max="10" />
     </form>
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#player_page" data-role="button" data-icon"arrow-r" data-theme="b" id="save_setup_data">Next</a>
+      <a href="#player_page" data-role="button" data-icon="arrow-r" data-theme="b" id="save_setup_data">Next</a>
     </div>
   </div>
 </div>
 
 <div data-role="page" class="type-interior" id="player_page">
   <div data-role="content" data-theme="e">
-    <ul data-role="listview" data-inset="true" id="players_list">
+    <!--
+    <ul data-role="listview" data-inset="true">
+	    <li><a href="#" style='display: none'>Acura</a></li>
     </ul>
-    <span id='players_to_choose_from'>
-      <span class="player">DavidR</span>
-      <span class="player">DavidW</span>
-      <span class="player">EJH</span>
-      <span class="player">GordonC</span>
-      <span class="player">HughB</span>
-      <span class="player">JayN</span>
-      <span class="player">JohnB</span>
-      <span class="player">MarkF</span>
-      <span class="player">OtisW</span>
-      <span class="player">SteveF</span>
+    -->
+    <ul data-role="listview" data-inset="true" id="players_list">
+      <li><a href="#">VW</a></li>
+    </ul>
+    <span id='players_to_choose_from' data-transition="slide" >
     </span>
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#intro_page" data-role="button" data-icon"arrow-l">Back</a>
-      <a href="#results_page" data-role="button" data-icon"arrow-r" data-theme="b" >Next</a>
+      <a href="#intro_page" data-role="button" data-transition="slide" data-direction="reverse" data-icon="arrow-l">Back</a>
+      <a href="#results_page" data-role="button" data-icon="arrow-r" data-theme="b" >Next</a>
     </div>
   </div>
 </div>
@@ -71,7 +67,8 @@
     <label for="chip_count_input"><span id='chips_for_player'></span></label>
     <input type="number" name="chip_count_input" id="chip_count" value=""/>
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#player_page" data-role="button" data-theme="b" id="save_player">Done</a>
+      <a href="#player_page" data-role="button" data-transition="slide" data-direction="reverse"
+         data-theme="b" id="save_player">Done</a>
     </div>
   </div>
 </div>
@@ -84,14 +81,15 @@
   <div data-role="content" data-theme="e">
     <h2>Results</h2>
 
-    <div data-role="controlgroup">
-      <input type="radio" name="payout" id="payout_exact" />Exact<br />
-      <input type="radio" name="payout" id="payout_one_dollar" />$1<br />
-      <input type="radio" name="payout" id="payout_five_dollars" />$5<br />
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#" data-role="button" data-theme="b" id="one_dollar">$1</a>
+      <a href="#" data-role="button" data-theme="b" id="five_dollars">$5</a>
     </div>
     <div id="payout_container">-results-here-</div>
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#player_page" data-role="button" data-theme="b" data-icon"arrow-l">Back</a>
+      <a href="#player_page" data-role="button" data-transition="slide" data-direction="reverse" 
+         data-icon="arrow-l">Back</a>
+      <a href="mailto:john.baylor@gmail.com?subject=test&body=foo%20bar" data-role="button" data-theme="b" >Email</a>
     </div>
   </div>
 </div>
